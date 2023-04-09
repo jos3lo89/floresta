@@ -46,7 +46,7 @@
             <ul class="menu">
                 <li class="menuItem"> <a href="#">inicio</a> </li>
                 <li class="menuItem">
-                    <p>nosotros</p>
+                    <a href="#" data-toggle="sub-menu">nosotros</a>
                     <ul class="subMenu">
                         <li> <a href="#">empresa</a> </li>
                         <li> <a href="#">historia</a> </li>
@@ -56,7 +56,7 @@
                     </ul>
                 </li>
                 <li class="menuItem">
-                    <a href="#">Especies de Madera</a>
+                    <a href="#" data-toggle="sub-menu">Especies de Madera</a>
                     <ul class="subMenu">
                         <li> <a href="#">Madera Nacional</a> </li>
                         <li> <a href="#">Madera Importada</a> </li>
@@ -64,7 +64,7 @@
                     </ul>
                 </li>
                 <li class="menuItem">
-                    <a href="#">productos</a>
+                    <a href="#" data-toggle="sub-menu">productos</a>
                     <ul class="subMenu">
                         <li> <a href="#">mesa</a> </li>
                         <li> <a href="#">mesa</a> </li>
@@ -80,7 +80,7 @@
                     </ul>
                 </li>
                 <li class="menuItem">
-                    <a href="#">servicios</a>
+                    <a href="#" data-toggle="sub-menu">servicios</a>
                     <ul class="subMenu">
                         <li> <a href="#">tratamiento</a> </li>
                         <li> <a href="#">tratamiento</a> </li>
@@ -100,12 +100,43 @@
             display: none;
         }
 
-        @media (min-width: 768px) {
-            .menu>.menuItem:hover .subMenu {
-                display: block;
-            }
+        .showSubmenu {
+            display: block;
         }
     </style>
+
+    <script>
+        const hideSubmenu = (subMenu) => {
+            subMenu.classList.remove("showSubmenu");
+        };
+
+        const subMenus = document.querySelectorAll('.subMenu');
+        subMenus.forEach((subMenu) => {
+            subMenu.addEventListener("mouseleave", (event) => {
+                hideSubmenu(event.target);
+            });
+        });
+
+        const toggleSubmenu = (event) => {
+            event.preventDefault();
+            const subMenu = event.target.nextElementSibling;
+            if (subMenu.classList.contains("showSubmenu")) {
+                hideSubmenu(subMenu);
+            } else {
+                subMenu.classList.add("showSubmenu");
+            }
+        };
+
+        const subMenuLinks = document.querySelectorAll('[data-toggle="sub-menu"]');
+        subMenuLinks.forEach((link) => {
+            link.addEventListener("mouseover", (event) => {
+                const subMenu = event.target.nextElementSibling;
+                subMenu.classList.add("showSubmenu");
+            });
+            link.addEventListener("click", toggleSubmenu);
+        });
+
+    </script>
 </body>
 
 </html>
