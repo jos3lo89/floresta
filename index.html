@@ -34,109 +34,53 @@
         <div class="sectionHead">
             <div class="logo">
                 <img src="assets/florestaLogo.png" alt="">
-                <a href="#" class="logoName">la floresta</a>
+                <!-- <a href="#" class="logoName">la floresta</a> -->
             </div>
             <div class="centralTel">
                 <p>central pedidos</p>
-                <span> <i class='bx bx-phone-call'></i> <a href="tel:+999999999">999 999 999</a> </span>
+                <span> <i class='bx bx-phone-call'></i> <a href="tel:+999999999"> +51 999999999</a> </span>
             </div>
         </div>
-
-        <div class="navBar">
+        <!-- xxxxx -->
+        <nav class="nav-menu">
             <ul class="menu">
-                <li class="menuItem"> <a href="#">inicio</a> </li>
-                <li class="menuItem">
-                    <a href="#" data-toggle="sub-menu">nosotros</a>
-                    <ul class="subMenu">
-                        <li> <a href="#">empresa</a> </li>
-                        <li> <a href="#">historia</a> </li>
-                        <li> <a href="#">Misión,Visión y Valores</a> </li>
-                        <li> <a href="#">Sostenibilidad</a> </li>
-                        <li> <a href="#">Certificaciones</a> </li>
+                <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">Home <i class="plus"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">Home 1</a></li>
+                        <li class="menu-item"><a href="#">Home 2</a></li>
+                        <li class="menu-item"><a href="#">Home 3</a></li>
+                        <li class="menu-item"><a href="#">Home 4</a></li>
                     </ul>
                 </li>
-                <li class="menuItem">
-                    <a href="#" data-toggle="sub-menu">Especies de Madera</a>
-                    <ul class="subMenu">
-                        <li> <a href="#">Madera Nacional</a> </li>
-                        <li> <a href="#">Madera Importada</a> </li>
-                        <li> <a href="#">Madera para exportación</a> </li>
+                <li class="menu-item">
+                    <a href="#">About</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Services</a>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                    <a href="#" data-toggle="sub-menu">Pages <i class="plus"></i></a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="#">page 1</a></li>
+                        <li class="menu-item"><a href="#">page 2</a></li>
+                        <li class="menu-item"><a href="#">page 3</a></li>
+                        <li class="menu-item"><a href="#">page 4</a></li>
                     </ul>
                 </li>
-                <li class="menuItem">
-                    <a href="#" data-toggle="sub-menu">productos</a>
-                    <ul class="subMenu">
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">mesa</a> </li>
-                        <li> <a href="#">silla</a> </li>
-                    </ul>
+                <li class="menu-item">
+                    <a href="#">News</a>
                 </li>
-                <li class="menuItem">
-                    <a href="#" data-toggle="sub-menu">servicios</a>
-                    <ul class="subMenu">
-                        <li> <a href="#">tratamiento</a> </li>
-                        <li> <a href="#">tratamiento</a> </li>
-                        <li> <a href="#">tratamiento</a> </li>
-                    </ul>
-                </li>
-                <li class="menuItem">
-                    <a href="#">contacto</a>
+                <li class="menu-item">
+                    <a href="#">Contact</a>
                 </li>
             </ul>
-        </div>
+        </nav>
+        <!-- xxxxx -->
+
     </header>
     <!-- header END -->
 
-    <style>
-        .subMenu {
-            display: none;
-        }
-
-        .showSubmenu {
-            display: block;
-        }
-    </style>
-
-    <script>
-        const hideSubmenu = (subMenu) => {
-            subMenu.classList.remove("showSubmenu");
-        };
-
-        const subMenus = document.querySelectorAll('.subMenu');
-        subMenus.forEach((subMenu) => {
-            subMenu.addEventListener("mouseleave", (event) => {
-                hideSubmenu(event.target);
-            });
-        });
-
-        const toggleSubmenu = (event) => {
-            event.preventDefault();
-            const subMenu = event.target.nextElementSibling;
-            if (subMenu.classList.contains("showSubmenu")) {
-                hideSubmenu(subMenu);
-            } else {
-                subMenu.classList.add("showSubmenu");
-            }
-        };
-
-        const subMenuLinks = document.querySelectorAll('[data-toggle="sub-menu"]');
-        subMenuLinks.forEach((link) => {
-            link.addEventListener("mouseover", (event) => {
-                const subMenu = event.target.nextElementSibling;
-                subMenu.classList.add("showSubmenu");
-            });
-            link.addEventListener("click", toggleSubmenu);
-        });
-
-    </script>
 </body>
 
 </html>
