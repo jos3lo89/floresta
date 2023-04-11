@@ -132,7 +132,7 @@ body {
 
 @media (max-width: 768px) {
 	.header {
-		border-bottom: 2px solid var(--title-color);
+		border-bottom: 2px solid var(--navBar-color);
 		position: sticky;
 		top: 0;
 	}
@@ -157,7 +157,6 @@ body {
 
 .navBarMain .navLinks {
 	background-color: var(--navBar-color);
-	
 }
 
 .navBarMain .navLinks .links {
@@ -173,11 +172,29 @@ body {
 	color: #fff;
 	font-size: 1.5rem;
 	text-transform: capitalize;
+
+	padding: .5rem;
+	border-radius: .5rem;
 }
 
 .navBarMain .navLinks .links li {
 	position: relative;
 	padding: 0 14px;
+}
+
+.navBarMain .navLinks .links li:hover {
+	background-color: var(--title-color);
+}
+
+@media (max-width: 768px) {
+	.navBarMain .navLinks .links li:hover {
+		background-color: transparent;
+	}
+
+	.navBarMain .navLinks .links li a:hover {
+		background-color: var(--title-color);
+	}
+
 }
 
 .navBarMain .navLinks .links li a {
@@ -213,6 +230,10 @@ body {
 }
 
 @media (max-width: 768px) {
+
+	.navBarMain {
+		height: 1rem;
+	}
 
 	.navBarMain .navLinks {
 		position: fixed;
