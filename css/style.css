@@ -59,6 +59,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
+	height: 3.5rem;
 }
 
 .contact .socials {
@@ -66,19 +67,18 @@ body {
 	gap: 1rem;
 }
 
-.contact .socials .facebook,
-.contact .socials .instagram,
-.contact .socials .wts {
-	width: 3rem;
-	height: 3rem;
-	/* background-color: #3f7d5e; */
+.contact .socials .facebook a,
+.contact .socials .instagram a,
+.contact .socials .wts a {
+	display: inline-block;
+	line-height: 3.5rem;
 }
 
-.contact .socials .facebook a i,
-.contact .socials .instagram a i,
-.contact .socials .wts a i {
-	font-size: 3rem;
-	color: #000;
+.contact .socials a img,
+.contact .socials a img,
+.contact .socials a img {
+	width: 3rem;
+	height: auto;
 }
 
 .contact .welcome p {
@@ -308,8 +308,12 @@ body {
 	display: none;
 }
 
+.socials2 a {
+	display: inline-block;
+}
+
 .socials2 a img {
-	width: 4rem;
+	width: 3rem;
 	height: auto;
 }
 
