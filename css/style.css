@@ -146,6 +146,20 @@ body {
 	cursor: pointer;
 }
 
+.header .sectionHead .description {
+	/* background-color: #075e54; */
+	width: 300px;
+	height: auto;
+	text-align: center;
+	margin: 1rem;
+}
+
+.header .sectionHead .description p {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--title-color);
+}
+
 @media (max-width: 768px) {
 	.header {
 		border-bottom: 2px solid var(--navBar-color);
@@ -159,6 +173,16 @@ body {
 
 	#btn-menu.bx-x {
 		transform: rotate(180deg);
+	}
+
+	.header .sectionHead .centralTel {
+		display: none;
+	}
+
+	.header .sectionHead .description p {
+		font-size: 1.2rem;
+		font-weight: 200;
+		color: #222;
 	}
 }
 
@@ -309,24 +333,52 @@ body {
 	}
 }
 
-.socials2 {
+.navBarMain .navLinks .links .socials2 {
 	/* position: absolute;
 	bottom: 0; */
 	display: none;
 }
 
-.socials2 a {
+.navBarMain .navLinks .links .socials2 a {
 	display: inline-block;
 }
 
-.socials2 a img {
+.navBarMain .navLinks .links .socials2 a img {
 	width: 3rem;
 	height: auto;
 }
 
+.navBarMain .navLinks .links .centralTel2 {
+	display: none;
+}
+
 @media (max-width: 768px) {
-	.socials2 {
+	.navBarMain .navLinks .links .socials2 {
 		display: inline;
+	}
+
+	.navBarMain .navLinks .links .centralTel2 {
+		display: inline-block;
+		width: 100%;
+		margin-left: 1rem;
+	}
+
+	.navBarMain .navLinks .links .centralTel2 p {
+		font-size: 2.5rem;
+		text-transform: capitalize;
+		color: #222;
+	}
+	
+	.navBarMain .navLinks .links .centralTel2 span i {
+		font-size: 2.5rem;
+		color: #222;
+	}
+	
+	.navBarMain .navLinks .links .centralTel2 span a {
+		font-size: 2rem;
+		color: #000;
+		background-color: #c2d2b2;
+		margin-left: .5rem;
 	}
 }
 
@@ -360,7 +412,7 @@ body {
 	bottom: 2rem;
 	left: 2rem;
 	/* background-color: #3f7d5e; */
-	z-index: 1000;
+	z-index: 500;
 }
 
 .btnWtsMain .btnWts {
