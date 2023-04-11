@@ -8,11 +8,11 @@ menuBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-	if (event.target.closest(".header") || event.target.closest(".navBarMain") ) {
-		return;
-	}
-	navBar.classList.remove("active");
-	menuBtn.classList.remove("bx-x");
+    if (event.target.closest(".header") || event.target.closest(".navBarMain")) {
+        return;
+    }
+    navBar.classList.remove("active");
+    menuBtn.classList.remove("bx-x");
 });
 // heder menu click END
 
@@ -63,9 +63,28 @@ cerrarArriba.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-	if (event.target.closest(".btnWtsMain")) {
-		return;
-	}
+    if (event.target.closest(".btnWtsMain")) {
+        return;
+    }
     btnWts.classList.remove("btnWtsActive")
 });
 // btnWts END
+
+
+// swiper START
+var swiper = new Swiper(".swiperMain", {
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+		delay: 5000, //auto-play cada 5 sec
+		pauseOnMouseEnter: true, //pasa maus y pausa slides
+		disableOnInteraction: false, //vuelva a lo mismo
+	},
+    keyboard: {
+		enabled: true,
+	},
+});
+// swiper END

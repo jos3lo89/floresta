@@ -171,6 +171,7 @@ body {
 
 	max-width: 1200px;
 	margin: 2rem auto;
+	z-index: 1000;
 }
 
 .navBarMain .navLinks {
@@ -357,6 +358,7 @@ body {
 	bottom: 2rem;
 	left: 2rem;
 	/* background-color: #3f7d5e; */
+	z-index: 1000;
 }
 
 .btnWtsMain .btnWts {
@@ -396,6 +398,7 @@ body {
 	-webkit-border-radius: 10px 10px 0px 0px;
 	-moz-border-radius: 10px 20px 0px 0px;
 }
+
 .btnWtsMain .contentWts .titleWts .btnCerrarWtsMain {
 	position: absolute;
 	top: .5rem;
@@ -503,3 +506,62 @@ body {
 }
 
 /* btnWhatsapp END */
+
+
+/* swiper START */
+.swiperMain .swiper-button-prev,
+.swiperMain .swiper-button-next {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.swiperMain:hover .swiper-button-prev,
+.swiperMain:hover .swiper-button-next {
+	opacity: 1;
+}
+
+.swiperMain {
+	width: 100%;
+	height: auto;
+	/* background-color: #075e54; */
+}
+
+.swiperMain .swiperContent .slides {
+	width: 100%;
+	height: 479px;
+	position: relative;
+
+}
+
+@media (max-width: 1100px) {
+	.swiperMain .swiperContent .slides  {
+		height: 35vh;
+	}
+}
+
+@media (max-width: 480px) {
+	.swiperMain .swiperContent .slides  {
+		height: 25vh;
+	}
+}
+
+
+.swiperMain .swiperContent .slides img {
+	position: absolute;
+	/* display: block; */
+	width: 100%;
+	height: 100%;
+	/* object-fit: cover; */
+	z-index: 21;
+}
+
+.swiperMain .swiperContent .slides .slideExtraContent {
+	position: absolute;
+	z-index: 22;
+}
+
+.swiperMain .swiperContent .slides .slideExtraContent p {
+	font-size: 5rem;
+}
+
+/* swiper END */
