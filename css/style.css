@@ -101,6 +101,7 @@ body {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
+	z-index: 1000;
 
 }
 
@@ -168,7 +169,6 @@ body {
 	height: 5rem;
 	position: sticky;
 	top: 0;
-
 	max-width: 1200px;
 	margin: 2rem auto;
 	z-index: 1000;
@@ -252,6 +252,8 @@ body {
 
 	.navBarMain {
 		height: 1rem;
+		margin: .1rem auto;
+
 	}
 
 	.navBarMain .navLinks::-webkit-scrollbar {
@@ -534,13 +536,13 @@ body {
 }
 
 @media (max-width: 1100px) {
-	.swiperMain .swiperContent .slides  {
+	.swiperMain .swiperContent .slides {
 		height: 35vh;
 	}
 }
 
 @media (max-width: 480px) {
-	.swiperMain .swiperContent .slides  {
+	.swiperMain .swiperContent .slides {
 		height: 25vh;
 	}
 }
