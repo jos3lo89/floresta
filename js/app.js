@@ -1,3 +1,4 @@
+// heder menu click START
 let navBar = document.querySelector(".navBarMain .navLinks");
 let menuBtn = document.querySelector("#btn-menu");
 
@@ -13,7 +14,9 @@ document.addEventListener("click", (event) => {
 	navBar.classList.remove("active");
 	menuBtn.classList.remove("bx-x");
 });
+// heder menu click END
 
+// nav links despliegue START
 let navLinks = document.querySelector(".navLinks");
 let desplega1 = document.querySelector(".acti1");
 let desplega2 = document.querySelector(".acti2");
@@ -28,10 +31,9 @@ desplega2.onclick = function () {
 desplega3.onclick = function () {
     navLinks.classList.toggle("show3")
 }
+// nav links despliegue END
 
-
-
-
+// boton subir top START
 let topBtn = document.querySelector(".btnSubir");
 
 window.onscroll = function () {
@@ -45,5 +47,6 @@ function scrollFunction() {
         topBtn.style.display = "none";
     }
 }
+// boton subir top END
 
 
