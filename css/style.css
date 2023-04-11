@@ -34,11 +34,13 @@ html {
 ::-webkit-scrollbar {
 	height: 0.5rem;
 	width: 1rem;
+	background-color: #b7d8a2;
+	;
 }
 
 ::-webkit-scrollbar-thumb {
 	background-color: var(--title-color);
-	border-radius: 5rem;
+	border-radius: .5rem;
 }
 
 body {
@@ -59,11 +61,24 @@ body {
 	justify-content: space-evenly;
 }
 
-.contact .socials i {
-	margin-left: 1rem;
-	font-size: 2.5rem;
-	margin: .5rem;
-	cursor: pointer;
+.contact .socials {
+	display: flex;
+	gap: 1rem;
+}
+
+.contact .socials .facebook,
+.contact .socials .instagram,
+.contact .socials .wts {
+	width: 3rem;
+	height: 3rem;
+	/* background-color: #3f7d5e; */
+}
+
+.contact .socials .facebook a i,
+.contact .socials .instagram a i,
+.contact .socials .wts a i {
+	font-size: 3rem;
+	color: #000;
 }
 
 .contact .welcome p {
@@ -235,6 +250,13 @@ body {
 		height: 1rem;
 	}
 
+	.navBarMain .navLinks::-webkit-scrollbar {
+		background-color: transparent;
+	}
+	.navBarMain .navLinks::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+	}
+
 	.navBarMain .navLinks {
 		position: fixed;
 		top: 11rem;
@@ -246,9 +268,7 @@ body {
 		overflow-x: hidden;
 		overflow-y: scroll;
 		max-width: 270px;
-
 		clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-
 	}
 
 	.navBarMain .navLinks.active {
@@ -282,21 +302,41 @@ body {
 	}
 }
 
+.socials2 {
+	/* position: absolute;
+	bottom: 0; */
+	display: none;
+}
+
+.socials2 a img {
+	width: 4rem;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.socials2 {
+		display: inline;
+	}
+}
+
 /* navBar END */
 
 /* btnSubir START */
 .btnSubir {
 	position: fixed;
-	bottom: 2rem;
+	bottom: 0;
 	right: 2rem;
 	width: 4rem;
 	height: 4rem;
-	background-color: var(--navBar-color);
-	border-radius: 1.5rem;
+	background: #404040;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
 }
 
 .btnSubir a i {
 	font-size: 4rem;
 	color: var(--title-color);
 }
+
 /* btnSubir END */
