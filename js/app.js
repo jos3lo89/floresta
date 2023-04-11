@@ -6,6 +6,14 @@ menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("bx-x")
 });
 
+document.addEventListener("click", (event) => {
+	if (event.target.closest(".header") || event.target.closest(".navBarMain") ) {
+		return;
+	}
+	navBar.classList.remove("active");
+	menuBtn.classList.remove("bx-x");
+});
+
 let navLinks = document.querySelector(".navLinks");
 let desplega1 = document.querySelector(".acti1");
 let desplega2 = document.querySelector(".acti2");
@@ -35,3 +43,5 @@ function scrollFunction() {
         topBtn.style.display = "none";
     }
 }
+
+
