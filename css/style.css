@@ -133,6 +133,8 @@ body {
 @media (max-width: 768px) {
 	.header {
 		border-bottom: 2px solid var(--title-color);
+		position: sticky;
+		top: 0;
 	}
 
 	.header .sectionHead .btnMenu {
