@@ -30,6 +30,8 @@ desplega3.onclick = function () {
 }
 
 
+
+
 let topBtn = document.querySelector(".btnSubir");
 
 window.onscroll = function () {
