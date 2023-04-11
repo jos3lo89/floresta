@@ -50,3 +50,22 @@ function scrollFunction() {
 // boton subir top END
 
 
+// btnWts START
+let btnWts = document.querySelector(".btnWtsMain .btnWts .contentWts");
+let btnAbrir = document.querySelector("#btnAbrir");
+let cerrarArriba = document.querySelector("#cerrarArriba");
+btnAbrir.addEventListener("click", () => {
+    btnWts.classList.toggle("btnWtsActive")
+});
+
+cerrarArriba.addEventListener("click", () => {
+    btnWts.classList.toggle("btnWtsActive")
+});
+
+document.addEventListener("click", (event) => {
+	if (event.target.closest(".btnWtsMain")) {
+		return;
+	}
+    btnWts.classList.remove("btnWtsActive")
+});
+// btnWts END

@@ -99,7 +99,7 @@ body {
 	background-color: var(--bg-claro);
 	display: flex;
 	flex-direction: column;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;
 
 }
@@ -168,6 +168,9 @@ body {
 	height: 5rem;
 	position: sticky;
 	top: 0;
+
+	max-width: 1200px;
+	margin: 2rem auto;
 }
 
 .navBarMain .navLinks {
@@ -253,6 +256,7 @@ body {
 	.navBarMain .navLinks::-webkit-scrollbar {
 		background-color: transparent;
 	}
+
 	.navBarMain .navLinks::-webkit-scrollbar-thumb {
 		border-radius: 0px;
 	}
@@ -346,3 +350,156 @@ body {
 }
 
 /* btnSubir END */
+
+/* btnWhatsapp START */
+.btnWtsMain {
+	position: fixed;
+	bottom: 2rem;
+	left: 2rem;
+	/* background-color: #3f7d5e; */
+}
+
+.btnWtsMain .btnWts {
+	position: relative;
+	min-width: 250px;
+}
+
+.btnWtsMain .btnWts button {
+	background: none;
+	cursor: pointer;
+	z-index: 999;
+}
+
+.btnWtsMain .btnWts button img {
+	width: 5.5rem;
+	height: auto;
+}
+
+.btnWtsMain .btnWts .contentWts {
+	text-align: center;
+	position: absolute;
+	bottom: 120%;
+
+	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.btnWtsMain .contentWts.btnWtsActive {
+	clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.btnWtsMain .contentWts .titleWts {
+	position: relative;
+	background-color: #075e54;
+	text-align: start;
+	padding: 1.3rem;
+	border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 20px 0px 0px;
+}
+.btnWtsMain .contentWts .titleWts .btnCerrarWtsMain {
+	position: absolute;
+	top: .5rem;
+	right: .5rem;
+	background-color: #222;
+	padding: .1rem;
+	border-radius: 50%;
+}
+
+.btnWtsMain .contentWts .titleWts .btnCerrarWtsMain i {
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.btnWtsMain .contentWts .titleWts p {
+	margin-left: 3rem;
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 200;
+}
+
+.btnWtsMain .contentWts .txtContent {
+	background-color: #ece5dd;
+	padding: 2rem;
+}
+
+.btnWtsMain .contentWts .txtContent .triangle {
+	position: relative;
+	background: #dcf8c6;
+	height: 4rem;
+}
+
+.btnWtsMain .contentWts .txtContent .triangle::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 15px 15px 0 15px;
+	border-color: #dcf8c6 transparent transparent transparent;
+	left: 7%;
+	transform: translateX(-50%) translateY(100%);
+}
+
+.btnWtsMain .contentWts .txtContent .triangle p {
+	text-align: start;
+	font-size: 1.2rem;
+	font-weight: 100;
+	padding: .5rem;
+}
+
+.btnWtsMain .contentWts .btnChatMain {
+	background-color: #fff;
+	/* margin: .5rem; */
+	/* height: 10rem; */
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	padding-top: 1rem;
+	border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+}
+
+.btnWtsMain .contentWts .btnChatMain a {
+	background-color: #25d366;
+	padding: 1rem;
+	min-width: 4rem;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	border-radius: 2rem;
+	display: flex;
+	gap: .5rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.btnWtsMain .contentWts .btnChatMain a i {
+	color: #fff;
+	font-size: 2rem;
+}
+
+
+.btnWtsMain .contentWts .btnChatMain a span {
+	color: #fff;
+}
+
+.btnWtsMain .contentWts .btnChatMain .inLineWts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 1rem;
+	gap: .5rem;
+}
+
+.btnWtsMain .contentWts .btnChatMain .inLineWts i {
+	color: #78b159;
+}
+
+.btnWtsMain .contentWts .btnChatMain .inLineWts p {
+	font-weight: 100;
+}
+
+/* btnWhatsapp END */
